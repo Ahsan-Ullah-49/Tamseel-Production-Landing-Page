@@ -217,7 +217,7 @@
       message.className = "film-unavailable";
       const text = document.createElement("p");
       text.textContent =
-        "Open Preview.cmd from the project folder to play videos here.";
+        "Open this page through VS Code Live Server to play videos here.";
       message.append(text);
       return message;
     }

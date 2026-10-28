@@ -43,9 +43,20 @@ No build step, package installation, backend or server-side runtime is required.
 
 Do not upload `Docs/` unless you want the project documentation publicly accessible. There are no `Preview.cmd` or `preview.py` files in the deployable project.
 
-## Calls and videos
+## Search and AI discovery
+
+- The page includes a focused title and description, social-preview metadata, semantic headings, visible service/location copy, useful image alternatives, and Organization JSON-LD.
+- Google Search and its AI features rely on the same crawlable, helpful page content. No `llms.txt`, hidden keyword copy, or special AI markup is needed.
+- The campaign URL has not been selected. Before launch, set a self-referencing canonical and `og:url` to the exact public page URL; add that URL to the live sitemap; and ensure robots.txt, hosting and CDN rules permit crawling.
+- After deployment, verify the page and Organization structured data in Google Search Console and test the share preview. Crawling, indexing, rankings and AI feature visibility are not guaranteed.
+- LocalBusiness markup is intentionally omitted until the client verifies the public business address and Google Business Profile details. Do not add aggregate-rating markup for the company's own reviews.
+
+The project brief, SEO requirements, current visual decisions and publish checklist are in `Docs/Tamseel-Landing-Page-PRD.md`, `Docs/Requirements.md`, `Docs/Designing-and-Prototyping.md` and `Docs/Planning.md`.
+
+## Calls, WhatsApp and videos
 
 - All call buttons open the visitor’s dialer using `tel:+971523025251` (the supplied UAE number, 052 302 5251). The number is not printed as page text.
+- The fixed bottom-right WhatsApp icon opens `https://wa.me/971523025251` in a new tab. This uses the new client-approved number, not the older WhatsApp link on the company's main website.
 - Keep the `CALL_TARGET` constant in `script.js` and the telephone `href` values in `index.html` aligned if the client changes the number. The HTML links remain usable if JavaScript is unavailable.
 - The nine gallery videos use YouTube’s embedded player inside the landing page. Clicking a poster loads the player in place; the page does not navigate to a separate YouTube watch page.
 - Video playback needs an internet connection and the source videos must allow embedding. The hero showreel uses the same on-page player approach in a dialog.
@@ -54,6 +65,7 @@ Do not upload `Docs/` unless you want the project documentation publicly accessi
 ## Updating the page
 
 - Edit page copy, section order, navigation, telephone links and video IDs in `index.html`.
+- The recognition badges appear before the final “Discuss your project” section. Keep this order unless the client requests another layout.
 - Edit colors, typography, spacing, hover effects and breakpoints in `styles.css`.
 - Edit interactive behavior, the shared call destination, embedded-player setup and smooth scrolling in `script.js`.
 - Replace images in `Assets/` while preserving the referenced paths, or update the corresponding `src` values in `index.html`.
@@ -64,6 +76,6 @@ Do not upload `Docs/` unless you want the project documentation publicly accessi
 
 - **YouTube:** embedded video playback; requires internet access and embedding to be allowed on the source videos.
 - **Google Fonts:** DM Sans, Manrope and Instrument Serif. System-font fallbacks are provided if Google Fonts are unavailable.
-- **Tamseel links:** Privacy Policy and Terms & Conditions point to their existing public destinations. Social media links and icons are intentionally omitted per the latest client direction.
+- **Tamseel links:** Privacy Policy and Terms & Conditions point to their existing public destinations. Social-profile links are omitted; the fixed WhatsApp contact shortcut is the only social-messaging route.
 
 This page does not include forms, analytics, advertising pixels, call-click tracking or a backend.

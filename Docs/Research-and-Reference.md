@@ -5,14 +5,22 @@
 
 This document records facts and source assets for the build. Use the official pages below as the source for current logos, image assets, video embeds, and published wording. Client-confirmed landing-page choices in the PRD take precedence over existing website sections that the client chose to omit.
 
-## Revision 8 implementation sources
+## Revision 10 implementation sources
 
 - The hero uses licensed illustrative filmmaking photography by Cemrecan Yurtman: [original Unsplash photograph](https://unsplash.com/photos/film-crew-working-with-a-professional-camera-on-set-NAoSEZonwZY), under the [Unsplash License](https://unsplash.com/license). Local file: Assets/Images/cinema-camera.jpg. This image is not claimed to depict Tamseel's crew or a named client project. The latest client instruction permits outside imagery for design.
 - About retains the supplied Assets/Images/About.webp. All 23 supplied client marks are used on a dark surface with the colors present in each source file visible at rest; hover adds a small zoom. The strip is titled “Our Clients,” has no CTA, and can be dragged.
-- The client supplied four recognition images in `Assets/Recognition/`: `Dubai Best.webp`, `truspilot.webp`, `Clutch.svg` and `Clutch reviews.png`. Place them after the final call area, link them to the client-approved Dubai’s Best, Trustpilot or Clutch profiles, and display each image with `object-fit: contain` so no badge is cropped. Do not add awards, ratings or platform claims beyond these supplied badge images.
+- The client supplied four recognition images in `Assets/Recognition/`: `Dubai Best.webp`, `truspilot.webp`, `Clutch.svg` and `Clutch reviews.png`. Place them after Reviews and before the final call area, link them to the client-approved Dubai’s Best, Trustpilot or Clutch profiles, and display each image with `object-fit: contain` so no badge is cropped. Do not add awards, ratings or platform claims beyond these supplied badge images.
 - The nine supplied YouTube IDs are recorded in Assets/Video-Embeds/Tamseel_Production_Video_Showreels.md. Their official thumbnail images are saved locally in Assets/Video-Posters/. Videos remain hosted on YouTube.
 - Smooth scrolling uses [Lenis](https://github.com/darkroomengineering/lenis), version 1.3.27, bundled locally in Assets/Vendor/ with its MIT license.
 - [YouTube's official player requirements](https://developers.google.com/youtube/terms/required-minimum-functionality) require a real HTTP referrer. Use VS Code Live Server for local embedded playback. Per the latest client instruction, local file mode never substitutes an outgoing video link.
+
+## Search and AI-search references
+
+- Google's [SEO Starter Guide](https://developers.google.com/search/docs/fundamentals/seo-starter-guide) recommends concise, accurate page titles and useful descriptions, descriptive image alternatives, and content written for people.
+- Google's [AI features website guidance](https://developers.google.com/search/docs/appearance/ai-features) says normal SEO foundations apply; the page must be indexable and useful, and there is no special AI schema or AI text file required.
+- Google's [Generative AI optimization guide](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide) advises people-first, distinctive content and says `llms.txt`, forced content chunking, and other proposed AEO/GEO shortcuts do not improve Google Search visibility.
+- Google's [Organization structured-data guidance](https://developers.google.com/search/docs/appearance/structured-data/organization) supports using accurate organization identity details. LocalBusiness markup is deliberately not added because this landing-page brief does not establish the company's full physical address or verified Business Profile values.
+- The official company's homepage is [tamseelproduction.com](https://tamseelproduction.com/). Use it as the organization website entity; do not treat it as the landing page's canonical URL unless the campaign actually publishes at that exact URL.
 
 ## Official pages reviewed
 
@@ -91,7 +99,7 @@ The current website exposes the following official profiles. This list is source
 - Vimeo: [Bilal Ismat](https://vimeo.com/bilalismat)
 - LinkedIn company page, verified from the company’s Vimeo description: [Tamseel Production](https://www.linkedin.com/company/tamseelproduction)
 
-The existing site’s WhatsApp link points to +971 56 468 6107, while the client supplied a different call number for this landing page. Do not include that WhatsApp link or any WhatsApp CTA unless the destination is updated and approved. No official TikTok profile URL was verified during this research; do not invent one. The client’s use of TikTok Ads does not mean a TikTok profile link or TikTok tracking pixel should be added.
+The existing site's WhatsApp link points to an older number. The client has now approved the phone number supplied for the landing page as the destination of its fixed WhatsApp shortcut. Use `https://wa.me/971523025251`; do not reuse the source site's older WhatsApp URL. Do not add WhatsApp social-profile links or any other social profiles. No official TikTok profile URL was verified during this research; do not invent one. The client's use of TikTok Ads does not mean a TikTok profile link or TikTok tracking pixel should be added.
 
 Link the footer to the same [Privacy Policy](https://tamseelproduction.com/privacy-policy/) and [Terms & Conditions](https://tamseelproduction.com/terms-and-conditions) as the official site.
 

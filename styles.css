@@ -5,6 +5,8 @@
   --ivory: #f5f3ed;
   --white: #fffefa;
   --orange: #f99466;
+  --whatsapp: #25d366;
+  --whatsapp-hover: var(--orange);
   --muted: #b0b3ac;
   --line: #dcded5;
   --line-dark: #343731;
@@ -1211,8 +1213,8 @@ em {
 .footer-bottom a:hover {
   color: var(--orange);
 }
-/* Fixed call shortcut stays available as visitors move through the page. */
-.floating-call {
+/* Persistent WhatsApp contact shortcut. */
+.floating-whatsapp {
   position: fixed;
   z-index: 30;
   right: max(24px, calc((100vw - 1320px) / 2));
@@ -1221,10 +1223,10 @@ em {
   place-items: center;
   width: 56px;
   height: 56px;
-  border: 1px solid var(--orange);
+  border: 1px solid var(--whatsapp);
   border-radius: 50%;
-  background: var(--orange);
-  color: var(--ink);
+  background: var(--whatsapp);
+  color: var(--white);
   box-shadow: 0 8px 26px rgb(0 0 0 / 28%);
   transition:
     background 0.25s ease,
@@ -1233,24 +1235,24 @@ em {
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
-.floating-call .icon {
-  width: 21px;
-  height: 21px;
+.floating-whatsapp .icon {
+  width: 24px;
+  height: 24px;
   transform-origin: 50% 50%;
   transition: transform 0.3s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
-.floating-call:hover {
+.floating-whatsapp:hover {
   transform: scale(1.08);
-  border-color: var(--ink);
-  background: var(--ink);
-  color: var(--ivory);
-  box-shadow: 0 10px 30px rgb(249 148 102 / 23%);
+  border-color: var(--whatsapp-hover);
+  background: var(--whatsapp-hover);
+  color: var(--white);
+  box-shadow: 0 10px 30px rgb(249 148 102 / 30%);
 }
-.floating-call:hover .icon {
-  animation: phone-nudge 0.62s ease-in-out infinite alternate;
+.floating-whatsapp:hover .icon {
+  animation: whatsapp-nudge 0.62s ease-in-out infinite alternate;
   transform: scale(1.12);
 }
-@keyframes phone-nudge {
+@keyframes whatsapp-nudge {
   to {
     transform: scale(1.12) rotate(-16deg);
   }
@@ -1449,7 +1451,7 @@ em {
   }
   .hero__frame,
   .hero__inner {
-    min-height: 500px;
+    min-height: 460px;
   }
   .hero__inner {
     width: calc(100% - 36px);
@@ -1488,8 +1490,10 @@ em {
   .hero__bottom {
     display: none;
   }
+  /* Tighten the hero-to-logo transition and keep the logo strip distinct. */
   .clients {
-    padding-block: 12px 17px;
+    padding-block: 8px 15px;
+    border-top: 1px solid rgb(255 255 255 / 12%);
   }
   .logo-list {
     gap: 30px;
@@ -1705,8 +1709,11 @@ em {
   .container {
     width: calc(100% - 36px);
   }
+  .hero__frame,
   .hero__inner {
-    min-height: 500px;
+    min-height: clamp(420px, 112vw, 460px);
+  }
+  .hero__inner {
     padding-block: 24px;
     justify-content: center;
   }
@@ -1861,7 +1868,7 @@ em {
     font-size: 10px;
     gap: 12px 14px;
   }
-  .floating-call {
+  .floating-whatsapp {
     right: 16px;
     bottom: 16px;
     width: 52px;
