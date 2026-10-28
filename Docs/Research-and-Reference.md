@@ -5,11 +5,12 @@
 
 This document records facts and source assets for the build. Use the official pages below as the source for current logos, image assets, video embeds, and published wording. Client-confirmed landing-page choices in the PRD take precedence over existing website sections that the client chose to omit.
 
-## Revision 4 implementation sources
+## Revision 8 implementation sources
 
 - The hero uses licensed illustrative filmmaking photography by Cemrecan Yurtman: [original Unsplash photograph](https://unsplash.com/photos/film-crew-working-with-a-professional-camera-on-set-NAoSEZonwZY), under the [Unsplash License](https://unsplash.com/license). Local file: Assets/Images/cinema-camera.jpg. This image is not claimed to depict Tamseel's crew or a named client project. The latest client instruction permits outside imagery for design.
-- About retains the supplied Assets/Images/About.webp. All 23 supplied client marks are used on a dark surface. Hover reveals the colors present in each source file and adds a small zoom. The strip is titled “Our Clients,” has no CTA, and can be dragged.
-- The nine supplied YouTube IDs are recorded in Assets/Video-Embeds/Tamseel_Production_Video_Showreels.md. Their official thumbnail images are saved locally in Assets/Video-Posters/. Films remain hosted on YouTube.
+- About retains the supplied Assets/Images/About.webp. All 23 supplied client marks are used on a dark surface with the colors present in each source file visible at rest; hover adds a small zoom. The strip is titled “Our Clients,” has no CTA, and can be dragged.
+- The client supplied four recognition images in `Assets/Recognition/`: `Dubai Best.webp`, `truspilot.webp`, `Clutch.svg` and `Clutch reviews.png`. Place them after the final call area, link them to the client-approved Dubai’s Best, Trustpilot or Clutch profiles, and display each image with `object-fit: contain` so no badge is cropped. Do not add awards, ratings or platform claims beyond these supplied badge images.
+- The nine supplied YouTube IDs are recorded in Assets/Video-Embeds/Tamseel_Production_Video_Showreels.md. Their official thumbnail images are saved locally in Assets/Video-Posters/. Videos remain hosted on YouTube.
 - Smooth scrolling uses [Lenis](https://github.com/darkroomengineering/lenis), version 1.3.27, bundled locally in Assets/Vendor/ with its MIT license.
 - [YouTube's official player requirements](https://developers.google.com/youtube/terms/required-minimum-functionality) require a real HTTP referrer. Use VS Code Live Server for local embedded playback. Per the latest client instruction, local file mode never substitutes an outgoing video link.
 
@@ -82,7 +83,7 @@ Keep the reviewer names as displayed. Do not invent job titles, company names, p
 
 ## Social and legal links
 
-Use verified official destinations in the footer. The current site’s Privacy Policy footer links to the following profiles:
+The current website exposes the following official profiles. This list is source research only; per the latest client direction, do not display social-media links or icons on the landing page:
 
 - YouTube: [Tamseel Production](https://www.youtube.com/@tamseelproduction.official)
 - Facebook: [Tamseel Production](https://www.facebook.com/@tamseelproduction)
@@ -103,5 +104,5 @@ The current official website displays +971-564686107 in its footer and contact i
 - Download/reuse visuals and logo files from Tamseel’s official website; use official embeds for the nine videos.
 - Write original, concise landing-page copy based on verified company details and client direction.
 - Do not reuse the source website’s FAQ, contact form, pricing, old phone number, or long SEO copy.
-- Do not invent performance statistics, awards, guarantees, client endorsements, social profiles, or service promises.
+- Do not invent performance statistics, awards, guarantees, client endorsements, social profiles, or service promises. The supplied recognition badges are the only exception and must be displayed as supplied.
 - The reference screenshot informs final-CTA hierarchy only; its blue color scheme, particle graphics, and portfolio-template content are not brand requirements.

@@ -451,7 +451,7 @@ em {
 }
 .hero__bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   position: absolute;
   bottom: 28px;
@@ -462,33 +462,13 @@ em {
   color: #b4b9ad;
   font-size: 10px;
 }
-.hero__bottom > span:nth-child(2) {
-  display: flex;
+.hero__bottom > span {
+  display: inline-flex;
   gap: 20px;
 }
 .hero__bottom i {
   color: var(--orange);
   font-style: normal;
-}
-.hero__bottom a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--ivory);
-}
-.hero__bottom a .icon {
-  width: 17px;
-  height: 17px;
-  transform: rotate(90deg);
-}
-.hero__edge-note {
-  position: absolute;
-  right: -10px;
-  top: 55px;
-  writing-mode: vertical-rl;
-  font-size: 9px;
-  letter-spacing: 0.22em;
-  color: rgb(255 255 255 / 50%);
 }
 /* Client marks stay compact on the dark strip and remain draggable while looping. */
 .clients {
@@ -575,18 +555,76 @@ em {
   width: 94%;
   height: 60px;
   object-fit: contain;
-  opacity: 0.8;
-  filter: grayscale(1);
+  opacity: 1;
+  filter: none;
   transform: scale(var(--logo-scale, 1));
   transition:
-    filter 0.28s ease,
-    opacity 0.28s ease,
     transform 0.35s cubic-bezier(0.2, 0.7, 0.2, 1);
 }
 .logo-list li:hover img {
-  opacity: 1;
-  filter: none;
   transform: scale(calc(var(--logo-scale, 1) * 1.08));
+}
+/* Recognition badges sit with the footer and link to their source profiles. */
+.recognition {
+  display: grid;
+  grid-template-columns: minmax(170px, 0.55fr) minmax(0, 2fr);
+  align-items: center;
+  gap: 28px;
+  padding-block: 18px;
+  border-block: 1px solid #293222;
+}
+.recognition .eyebrow {
+  margin-bottom: 5px;
+  font-size: 8px;
+}
+.recognition h2 {
+  color: var(--ivory);
+  font-size: clamp(20px, 2vw, 27px);
+  font-weight: 500;
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+}
+.recognition h2 em {
+  color: var(--orange);
+}
+.recognition__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 12px;
+}
+.recognition-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 0;
+  min-height: 104px;
+  padding: 10px 12px;
+  border: 1px solid #303b2a;
+  border-radius: 6px;
+  background: #080a08;
+  transition:
+    border-color 0.2s ease,
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+.recognition-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--orange);
+  background: #0b0e0b;
+}
+.recognition-card:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 3px;
+}
+.recognition-card img {
+  width: 100%;
+  height: 82px;
+  object-fit: contain;
+}
+.recognition-card--trustpilot,
+.recognition-card--trustpilot:hover {
+  background: #fff;
 }
 /* Nine real films in three equal columns. Players open only on request. */
 .section-heading {
@@ -957,6 +995,15 @@ em {
   height: 15px;
   color: #a64e26;
 }
+.reviews__action {
+  display: none;
+}
+.reviews__header-cta {
+  flex: 0 0 auto;
+}
+.about__mobile-cta {
+  display: none;
+}
 /* All original reviews stay selectable and unabridged. */
 .reviews {
   padding-top: 0;
@@ -1077,7 +1124,7 @@ em {
 .review-card--feature .review-stars {
   color: var(--ink);
 }
-/* Final call, brand, social icons and legal links share one footer. */
+/* Final call, brand and legal links share one footer. */
 .closing {
   overflow: hidden;
   position: relative;
@@ -1098,6 +1145,14 @@ em {
 }
 .closing h2 em {
   color: var(--orange);
+}
+.closing .recognition h2 {
+  font-size: clamp(24px, 2.4vw, 32px);
+  line-height: 1.02;
+}
+.closing .recognition h2 span,
+.closing .recognition h2 em {
+  display: block;
 }
 .closing__action {
   padding-top: 18px;
@@ -1128,34 +1183,6 @@ em {
   margin-left: 16px;
   color: #9eac92;
   font-size: 11px;
-}
-.social-links {
-  display: flex;
-  gap: 9px;
-}
-.social-links a {
-  display: grid;
-  place-items: center;
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  border: 1px solid #384331;
-  color: #c4cfb9;
-  transition:
-    background 0.25s,
-    color 0.25s,
-    border-color 0.25s,
-    transform 0.25s;
-}
-.social-links a:hover {
-  color: var(--ink);
-  background: var(--orange);
-  border-color: var(--orange);
-  transform: translateY(-3px);
-}
-.social-links .icon {
-  width: 15px;
-  height: 15px;
 }
 .footer-bottom {
   display: flex;
@@ -1321,7 +1348,7 @@ em {
   .hero__inner {
     min-height: 510px;
   }
-  .hero__bottom > span:nth-child(2) {
+  .hero__bottom > span {
     gap: 12px;
   }
   .section-heading__side {
@@ -1422,12 +1449,13 @@ em {
   }
   .hero__frame,
   .hero__inner {
-    min-height: 510px;
+    min-height: 500px;
   }
   .hero__inner {
     width: calc(100% - 36px);
-    padding-top: 36px;
-    padding-bottom: 85px;
+    align-items: flex-start;
+    padding-block: 30px;
+    text-align: left;
   }
   .hero__image {
     width: 100%;
@@ -1453,18 +1481,11 @@ em {
     margin-top: 20px;
   }
   .hero__actions {
-    gap: 17px;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 12px;
+    flex-wrap: nowrap;
   }
   .hero__bottom {
-    font-size: 9px;
-    bottom: 20px;
-    padding-top: 18px;
-  }
-  .hero__bottom > span:nth-child(2) {
-    display: none;
-  }
-  .hero__edge-note {
     display: none;
   }
   .clients {
@@ -1554,9 +1575,22 @@ em {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+  .about__copy {
+    order: 1;
+  }
   .about__visual {
+    order: 2;
     min-height: 0;
     aspect-ratio: 16/10;
+  }
+  .about__copy > .button {
+    display: none;
+  }
+  .about__mobile-cta {
+    display: inline-flex;
+    order: 3;
+    justify-self: center;
+    margin-top: -14px;
   }
   .about__copy > p:not(.eyebrow) {
     max-width: 100%;
@@ -1577,6 +1611,14 @@ em {
     grid-template-columns: 1fr;
     gap: 12px;
   }
+  .reviews__header-cta {
+    display: none;
+  }
+  .reviews__action {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+  }
   .review-card {
     padding: 20px;
   }
@@ -1595,14 +1637,16 @@ em {
     margin-bottom: 12px;
   }
   .closing {
-    padding-top: 45px;
+    padding-top: 42px;
   }
   .closing__main {
-    gap: 25px;
-    padding-bottom: 38px;
+    grid-template-columns: 1fr;
+    gap: 17px;
+    padding-bottom: 22px;
   }
   .closing h2 {
-    font-size: 48px;
+    max-width: 100%;
+    font-size: clamp(34px, 9.5vw, 44px);
   }
   .closing__main .eyebrow {
     max-width: 280px;
@@ -1610,6 +1654,7 @@ em {
   }
   .closing__action p {
     font-size: 12px;
+    margin-bottom: 13px;
   }
   .closing__action .button {
     font-size: 11px;
@@ -1619,12 +1664,28 @@ em {
   .footer-middle {
     flex-wrap: wrap;
     gap: 14px;
+    padding-block: 18px;
   }
   .footer-middle > p {
     margin-left: 0;
   }
   .footer-bottom {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 14px 18px;
+    font-size: 10px;
+  }
+  .footer-bottom > span {
+    grid-column: 1 / -1;
+    line-height: 1.5;
+  }
+  .footer-bottom > div {
     flex-wrap: wrap;
+    gap: 10px 16px;
+  }
+  .footer-bottom > a {
+    justify-self: end;
   }
   .film-dialog {
     width: calc(100% - 24px);
@@ -1645,9 +1706,9 @@ em {
     width: calc(100% - 36px);
   }
   .hero__inner {
-    min-height: 510px;
-    padding-top: 38px;
-    justify-content: flex-start;
+    min-height: 500px;
+    padding-block: 24px;
+    justify-content: center;
   }
   .hero__image {
     object-position: 62% center;
@@ -1656,19 +1717,32 @@ em {
     font-size: clamp(42px, 10.5vw, 55px);
   }
   .hero__actions {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
-    margin-top: 25px;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-top: 23px;
+  }
+  .hero__actions .button {
+    min-height: 42px;
+    gap: 10px;
+    padding: 5px 6px 5px 15px;
+    font-size: 10px;
+  }
+  .hero__actions .button__icon {
+    width: 30px;
+    height: 30px;
   }
   .hero__reel {
-    font-size: 11px;
+    gap: 8px;
+    font-size: 10px;
   }
-  .hero__bottom {
-    align-items: center;
+  .hero__reel > span {
+    width: 30px;
+    height: 30px;
   }
-  .hero__bottom a {
-    font-size: 9px;
+  .hero__reel .icon {
+    width: 13px;
+    height: 13px;
   }
   .section-heading {
     flex-direction: column;
@@ -1682,6 +1756,28 @@ em {
   .section-heading__description {
     max-width: 100%;
     font-size: 12px;
+  }
+  .work .section-heading {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .work .section-heading__side {
+    width: auto;
+    align-items: flex-end;
+  }
+  .work .section-heading h2 {
+    font-size: 28px;
+  }
+  .work .section-heading .button {
+    min-height: 36px;
+    gap: 7px;
+    padding-left: 11px;
+  }
+  .work .section-heading .button__icon {
+    width: 24px;
+    height: 24px;
   }
   .desktop-break {
     display: none;
@@ -1741,15 +1837,16 @@ em {
   }
   .closing__main {
     grid-template-columns: 1fr;
-    gap: 6px;
+    gap: 16px;
   }
   .closing h2 {
-    font-size: 52px;
+    font-size: clamp(38px, 11vw, 48px);
   }
   .closing__action {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
+    padding-top: 0;
   }
   .closing__action p {
     margin-bottom: 16px;
@@ -1760,22 +1857,15 @@ em {
   .footer-middle > p {
     font-size: 10px;
   }
-  .social-links {
-    width: 100%;
-  }
   .footer-bottom {
-    font-size: 8px;
-    gap: 14px 18px;
+    font-size: 10px;
+    gap: 12px 14px;
   }
   .floating-call {
     right: 16px;
     bottom: 16px;
     width: 52px;
     height: 52px;
-  }
-  .footer-bottom > div {
-    order: 3;
-    width: 100%;
   }
   .film-dialog__screen {
     min-height: 200px;
@@ -1901,6 +1991,57 @@ em {
   .header-actions .button__icon {
     width: 25px;
     height: 25px;
+  }
+  .hero__actions {
+    gap: 7px;
+    flex-wrap: nowrap;
+  }
+  .hero__actions .button {
+    gap: 7px;
+    padding-left: 11px;
+  }
+  .hero__reel {
+    gap: 6px;
+    font-size: 9px;
+  }
+  .work .section-heading {
+    gap: 6px;
+  }
+  .work .section-heading h2 {
+    font-size: 25px;
+  }
+  .work .section-heading .button {
+    gap: 5px;
+    padding-left: 8px;
+    font-size: 9px;
+  }
+  .closing {
+    padding-top: 36px;
+  }
+  .closing__main {
+    gap: 14px;
+    padding-bottom: 20px;
+  }
+  .closing h2 {
+    font-size: clamp(32px, 10vw, 38px);
+  }
+}
+@media (max-width: 560px) {
+  .recognition {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+    padding-block: 16px;
+  }
+  .recognition__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+  .recognition-card {
+    min-height: 92px;
+    padding: 8px;
+  }
+  .recognition-card img {
+    height: 72px;
   }
 }
 @media (max-width: 320px) {

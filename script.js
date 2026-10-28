@@ -198,7 +198,7 @@
   reducedMotion.addEventListener("change", syncLogoMotion);
   syncLogoMotion();
 
-  // A real YouTube embed is loaded only when a visitor chooses a film.
+  // A real YouTube embed is loaded only when a visitor chooses a video.
   // HTTP/HTTPS supplies YouTube's required Referer. Never spoof the company domain.
   const screen = document.querySelector("#film-screen");
   const filmTitle = document.querySelector("#film-title");

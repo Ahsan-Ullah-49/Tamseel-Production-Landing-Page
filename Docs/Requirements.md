@@ -3,14 +3,15 @@
 **Project:** Tamseel Production landing page  
 **Implementation:** Static HTML, CSS and vanilla JavaScript, with locally bundled Lenis for scrolling
 
-## Revision 4 refinements
+## Revision 8 refinements
 
-The latest client feedback calls for a compact cinematic redesign, new headlines, polished telephone buttons, actual social icons and smoother scrolling. Designing and Prototyping now describes the implemented design and supersedes earlier visual examples. The main conversion/content requirements below remain applicable.
+The latest client feedback keeps call labels short (“Let’s Talk”, “Contact Us” and “Call Us”), uses “Testimonials” in navigation, removes “Dubai based. Globally minded.” and moves the four supplied recognition badges to the footer after the final call area. On mobile, left-align and vertically center the hero copy with both actions on one row; place About text, image, then centered CTA; keep the Work CTA beside its heading; and center the Reviews CTA below the cards. On desktop, the Reviews CTA sits beside its heading. Designing and Prototyping describes the implemented design and supersedes earlier visual examples.
 
-- Display all nine actual video posters in a 3×3 desktop grid and two mobile columns. Clicking a gallery thumbnail replaces it with the matching embedded player inside that card. Only one film plays at a time. Close film restores the poster. On mobile the playing card spans both columns. The hero showreel uses an on-page dialog.
-- All 23 supplied client logos sit on a dark background under an “Our Clients” heading. Remove “In good company”, the CTA, and the pause button. The strip loops continuously and supports pointer/touch dragging and arrow-key browsing. Hover reveals source colors and adds a small zoom; normalize visible logo sizes without clipping. Reduced-motion mode turns off autoplay and keeps manual scrolling available.
+- Display all nine actual video posters in a 3×3 desktop grid and two mobile columns. Clicking a gallery thumbnail replaces it with the matching embedded player inside that card. Only one video plays at a time. Close video restores the poster. On mobile the playing card spans both columns. The hero showreel uses an on-page dialog.
+- All 23 supplied client logos sit on a dark background under an “Our Clients” heading, with their source colors shown at rest. Remove “In good company”, the CTA, and the pause button. The strip loops continuously and supports pointer/touch dragging and arrow-key browsing. Hover adds a small zoom; normalize visible logo sizes without clipping. Reduced-motion mode turns off autoplay and keeps manual scrolling available.
 - On dark call buttons, change the phone icon color when the button fills orange. The bottom-right call shortcut changes from orange to charcoal on hover; its icon changes to a contrasting light color.
-- Call labels may be edited creatively; each remains distinct, displays a phone icon and uses the same tel destination.
+- Use plain, repeated labels where appropriate: “Let’s Talk”, “Contact Us” and “Call Us”. Each call action displays a phone icon and uses the same tel destination.
+- Add a compact, CTA-free recognition section after the final call area and before footer branding/legal links. Link each of the four supplied Dubai’s Best, Trustpilot and Clutch images to the client-provided profile URL; display each image completely without cropping.
 - Licensed stock imagery is allowed by the latest instruction, with provenance recorded. Do not identify another production crew as Tamseel's team.
 - Lenis 1.3.27 is the sole runtime helper. Retain native touch momentum and respect reduced-motion preference changes.
 - Use VS Code Live Server for local HTTP preview. Video controls are buttons, never outgoing YouTube links. No “Watch on YouTube” or external playback fallback is included. A local file URL may not supply YouTube's required web origin. Embedded players are sandboxed against popup and parent-page navigation.
@@ -19,40 +20,35 @@ The latest client feedback calls for a compact cinematic redesign, new headlines
 
 ### Call conversion
 
-- The primary action is a phone call. Every major content section has a call CTA with its own context-specific label.
+- The primary action is a phone call. Every major content section has a clear, short call CTA.
 - Every call CTA points to the same destination: tel:+971523025251, based on the client-provided number 052 302 5251.
 - Render the phone number nowhere as visible text. The user should see a button label, tap it, and get the device’s dialer/calling app with the number ready. Do not try to place a call automatically.
 - Include the call action in the header, hero, work section, every service card, About section, Reviews, and final CTA. Keep an icon-only call shortcut fixed at the bottom right. The logo strip has no CTA.
 - Suggested labels:
   - Header: “Let’s Talk”
-  - Hero: “Let’s Talk About Your Film”
-  - Work: “Make Your Next Film”
-  - Personal branding: “Plan My Brand Film”
-  - Documentary: “Discuss My Documentary”
-  - Corporate video and photography: “Talk Corporate Content”
-  - Advertisement: “Plan My Campaign”
-  - Livestream: “Discuss My Live Event”
-  - Podcast: “Talk About My Podcast”
-  - About: “Meet Your Production Team”
-  - Reviews: “Let’s Create Together”
-  - Final CTA: “Call & Start Your Project”
+  - Hero: “Contact Us”
+  - Work: “Call Us”
+  - Every service card: “Call Us”
+  - About: “Contact Us”
+  - Reviews: “Call Us”
+  - Final CTA: “Contact Us”
   - Floating call shortcut: icon-only with an accessible “Call Tamseel Production” label.
-- All button labels are editable copy, but each should remain distinct and clearly lead to a call.
+- All button labels must be concise and clearly lead to a call.
 
 ### Navigation and page sections
 
-- Provide four working same-page navigation links: Work, Services, About, Reviews.
+- Provide four working same-page navigation links: Work, Services, About, Testimonials.
 - Use matching section IDs and ensure links work from desktop and mobile navigation.
-- Keep the sequence: header, hero, client-logo strip, nine-video work section, services, combined About/why section, reviews, final CTA/footer.
+- Keep the sequence: header, hero, client-logo strip, nine-video work section, services, combined About/why section, reviews, final call area, recognition badges, footer branding/legal links.
 - The logo strip includes every client logo on the source website and loops continuously. It has only the “Our Clients” heading, no CTA or pause button; it is manually draggable and keyboard browsable. Use a static, scrollable reduced-motion fallback.
 - The Work section embeds all nine official projects listed in Research and Reference, in the same title order.
-- Services includes all six source-site services, each with a concise description and its own telephone CTA.
-- Combine About and why-Tamseel content in one image-plus-short-points section.
-- Reviews use the three published quotes and names in their original languages and wording. Use larger type, large names, five client-requested stars, a Google-colored wordmark, and a contrasting card treatment.
+- Services includes all six source-site services, each with a concise description and full-card “Call Us” telephone action. The section heading is “Our Video Services.”
+- Combine About and why-Tamseel content in one image-plus-short-points section; show copy before image on phones.
+- Reviews use the three published quotes and names in their original languages and wording. Use larger type, large names, five client-requested stars, a Google-colored wordmark, and a contrasting card treatment. Put “Call Us” beside the heading on desktop and below the cards, centered, on mobile.
 
 ### Footer and outbound links
 
-- Include the verified official social links listed in Research and Reference, with accessible names for icon-only links.
+- Do not include social-media links or icons.
 - Include official Privacy Policy and Terms & Conditions links.
 - Do not include WhatsApp until its destination is confirmed against the new phone instruction. Do not fabricate a TikTok profile URL.
 - Do not show email as a call substitute.
@@ -93,13 +89,14 @@ The latest client feedback calls for a compact cinematic redesign, new headlines
 
 - [ ] Every specified major section is present in the agreed order.
 - [ ] Four navigation links target the correct sections.
-- [ ] Every call CTA has a section-specific label and one shared correct tel destination.
+- [ ] Every call CTA uses a short, clear label and one shared correct tel destination.
 - [ ] The page never prints the phone number visibly.
 - [ ] All six services and all nine titled project embeds are present.
 - [ ] Every logo from the source Clients strip appears; loop has no CTA/pause control, supports dragging and arrow keys, and respects reduced motion.
+- [ ] All four supplied recognition images appear after the final call area, link to their approved profiles, and remain uncropped.
 - [ ] All three reviews remain exact and untranslated.
 - [ ] Review cards show large names, five stars and the Google wordmark; the fixed icon-only call shortcut is available at bottom right.
-- [ ] Social and legal links use verified destinations; old WhatsApp link is absent.
+- [ ] Privacy Policy and Terms & Conditions use their verified destinations; social-media links and the old WhatsApp link are absent.
 - [ ] No form, FAQ, tracking script, pixel, visible phone number, placeholder, or unverified claim is present.
 - [ ] Mobile, tablet, and desktop layouts are readable and usable; no horizontal overflow.
 - [ ] HTML/CSS/JS are cleanly separated and commented where useful.

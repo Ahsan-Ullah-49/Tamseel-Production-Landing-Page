@@ -1,6 +1,6 @@
 # Tamseel Production — Landing Page
 
-A static, responsive landing page for Tamseel Production. It presents the company’s work, services, studio, client reviews and social profiles, with phone calls as the primary action.
+A static, responsive landing page for Tamseel Production. It presents the company’s work, services, studio and client reviews, with phone calls as the primary action.
 
 ## Project contents
 
@@ -13,6 +13,7 @@ Tamseel Production/
 │   ├── Brand/                  # Tamseel logo and browser-tab favicon
 │   ├── Clint-Logos/             # Client logo images used in the page
 │   ├── Images/                  # Production and studio images
+│   ├── Recognition/              # Supplied Dubai's Best, Trustpilot and Clutch badges
 │   ├── Video-Posters/           # Posters shown before a video is played
 │   ├── Video-Embeds/            # Reference list of the official showreel links
 │   └── Vendor/                  # Local Lenis files and their license
@@ -48,6 +49,7 @@ Do not upload `Docs/` unless you want the project documentation publicly accessi
 - Keep the `CALL_TARGET` constant in `script.js` and the telephone `href` values in `index.html` aligned if the client changes the number. The HTML links remain usable if JavaScript is unavailable.
 - The nine gallery videos use YouTube’s embedded player inside the landing page. Clicking a poster loads the player in place; the page does not navigate to a separate YouTube watch page.
 - Video playback needs an internet connection and the source videos must allow embedding. The hero showreel uses the same on-page player approach in a dialog.
+- Call labels use plain wording such as “Let’s Talk”, “Contact Us” and “Call Us” so visitors immediately understand that each action opens their dialer.
 
 ## Updating the page
 
@@ -62,6 +64,6 @@ Do not upload `Docs/` unless you want the project documentation publicly accessi
 
 - **YouTube:** embedded video playback; requires internet access and embedding to be allowed on the source videos.
 - **Google Fonts:** DM Sans, Manrope and Instrument Serif. System-font fallbacks are provided if Google Fonts are unavailable.
-- **Tamseel links:** the social profiles, Privacy Policy and Terms & Conditions point to their existing public destinations.
+- **Tamseel links:** Privacy Policy and Terms & Conditions point to their existing public destinations. Social media links and icons are intentionally omitted per the latest client direction.
 
 This page does not include forms, analytics, advertising pixels, call-click tracking or a backend.
