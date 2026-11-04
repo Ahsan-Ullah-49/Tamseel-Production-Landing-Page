@@ -12,6 +12,29 @@
     gtag('js', new Date());
     gtag('config', 'AW-18538066870');
   </script>
+  <!-- Google Ads call conversion: triggered only by telephone links. -->
+  <script>
+    function gtag_report_conversion(url) {
+      var completed = false;
+      var callback = function () {
+        if (completed) {
+          return;
+        }
+        completed = true;
+        if (typeof (url) !== 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18538066870/XxEqCPP8jrIdELbn0YdF',
+        'value': 1.0,
+        'currency': 'AED',
+        'event_callback': callback
+      });
+      window.setTimeout(callback, 1000);
+      return false;
+    }
+  </script>
   <meta name="theme-color" content="#111412" />
   <meta name="referrer" content="strict-origin-when-cross-origin" />
   <meta name="description"
@@ -125,7 +148,7 @@
           href="#reviews">Testimonials</a>
       </nav>
       <div class="header-actions">
-        <a class="button button--small button--light" href="tel:+971523025251" data-call><span>Let’s Talk</span><span
+        <a class="button button--small button--light" href="tel:+971523025251" data-call onclick="return gtag_report_conversion(this.href)"><span>Let’s Talk</span><span
             class="button__icon"><svg class="icon" aria-hidden="true">
               <use href="#i-phone"></use>
             </svg></span></a>
@@ -158,7 +181,7 @@
               We plan, shoot and edit.
             </p>
             <div class="hero__actions">
-              <a class="button button--orange" href="tel:+971523025251" data-call><span>Contact Us</span><span
+              <a class="button button--orange" href="tel:+971523025251" data-call onclick="return gtag_report_conversion(this.href)"><span>Contact Us</span><span
                   class="button__icon"><svg class="icon" aria-hidden="true">
                     <use href="#i-phone"></use>
                   </svg></span></a>
@@ -274,7 +297,7 @@
             <h2 id="work-title">See What We <em>Shoot.</em></h2>
           </div>
           <div class="section-heading__side">
-            <a class="button button--dark button--small" href="tel:+971523025251" data-call><span>Call Us</span><span
+            <a class="button button--dark button--small" href="tel:+971523025251" data-call onclick="return gtag_report_conversion(this.href)"><span>Call Us</span><span
                 class="button__icon"><svg class="icon" aria-hidden="true">
                   <use href="#i-phone"></use>
                 </svg></span></a>
@@ -529,7 +552,7 @@
           </p>
         </div>
         <div class="service-grid">
-          <a class="service-card" href="tel:+971523025251" data-call
+          <a class="service-card" href="tel:+971523025251" data-call onclick="return gtag_report_conversion(this.href)"
             aria-label="Call Tamseel about Personal Branding Video Production">
             <div class="service-card__top">
               <span class="service-card__icon"><svg class="icon" aria-hidden="true">
@@ -545,7 +568,7 @@
                   <use href="#i-phone"></use>
                 </svg></span></span>
           </a>
-          <a class="service-card" href="tel:+971523025251" data-call
+          <a class="service-card" href="tel:+971523025251" data-call onclick="return gtag_report_conversion(this.href)"
             aria-label="Call Tamseel about Documentary Filmmaking">
             <div class="service-card__top">
               <span class="service-card__icon"><svg class="icon" aria-hidden="true">
@@ -561,7 +584,7 @@
                   <use href="#i-phone"></use>
                 </svg></span></span>
           </a>
-          <a class="service-card" href="tel:+971523025251" data-call
+          <a class="service-card" href="tel:+971523025251" data-call onclick="return gtag_report_conversion(this.href)"
             aria-label="Call Tamseel about Corporate Video and Photography Services">
             <div class="service-card__top">
               <span class="service-card__icon"><svg class="icon" aria-hidden="true">
@@ -577,7 +600,7 @@
                   <use href="#i-phone"></use>
                 </svg></span></span>
           </a>
-          <a class="service-card" href="tel:+971523025251" data-call
+          <a class="service-card" href="tel:+971523025251" data-call onclick="return gtag_report_conversion(this.href)"
             aria-label="Call Tamseel about Advertisement Video Production">
             <div class="service-card__top">
               <span class="service-card__icon"><svg class="icon" aria-hidden="true">
@@ -593,7 +616,7 @@
                   <use href="#i-phone"></use>
                 </svg></span></span>
           </a>
-          <a class="service-card" href="tel:+971523025251" data-call
+          <a class="service-card" href="tel:+971523025251" data-call onclick="return gtag_report_conversion(this.href)"
             aria-label="Call Tamseel about Livestream Production Services">
             <div class="service-card__top">
               <span class="service-card__icon"><svg class="icon" aria-hidden="true">
@@ -609,7 +632,7 @@
                   <use href="#i-phone"></use>
                 </svg></span></span>
           </a>
-          <a class="service-card" href="tel:+971523025251" data-call aria-label="Call Tamseel about Podcast Production">
+          <a class="service-card" href="tel:+971523025251" data-call onclick="return gtag_report_conversion(this.href)" aria-label="Call Tamseel about Podcast Production">
             <div class="service-card__top">
               <span class="service-card__icon"><svg class="icon" aria-hidden="true">
                   <use href="#i-mic"></use>
@@ -669,12 +692,12 @@
               Filming and editing handled by one team.
             </li>
           </ul>
-          <a class="button button--dark" href="tel:+971523025251" data-call><span>Contact Us</span><span
+          <a class="button button--dark" href="tel:+971523025251" data-call onclick="return gtag_report_conversion(this.href)"><span>Contact Us</span><span
               class="button__icon"><svg class="icon" aria-hidden="true">
                 <use href="#i-phone"></use>
               </svg></span></a>
         </div>
-        <a class="button button--dark about__mobile-cta" href="tel:+971523025251" data-call><span>Contact Us</span><span
+        <a class="button button--dark about__mobile-cta" href="tel:+971523025251" data-call onclick="return gtag_report_conversion(this.href)"><span>Contact Us</span><span
             class="button__icon"><svg class="icon" aria-hidden="true">
               <use href="#i-phone"></use>
             </svg></span></a>
@@ -691,7 +714,7 @@
             </h2>
           </div>
           <a class="button button--outline button--small reviews__header-cta" href="tel:+971523025251"
-            data-call><span>Call Us</span><span class="button__icon"><svg class="icon" aria-hidden="true">
+            data-call onclick="return gtag_report_conversion(this.href)"><span>Call Us</span><span class="button__icon"><svg class="icon" aria-hidden="true">
                 <use href="#i-phone"></use>
               </svg></span></a>
         </div>
@@ -759,7 +782,7 @@
           </figure>
         </div>
         <div class="reviews__action">
-          <a class="button button--outline button--small" href="tel:+971523025251" data-call><span>Call Us</span><span
+          <a class="button button--outline button--small" href="tel:+971523025251" data-call onclick="return gtag_report_conversion(this.href)"><span>Call Us</span><span
               class="button__icon"><svg class="icon" aria-hidden="true">
                 <use href="#i-phone"></use>
               </svg></span></a>
@@ -814,7 +837,7 @@
           </div>
           <div class="closing__action">
             <p>Tell us what you need.<br />Call our team to get started.</p>
-            <a class="button button--orange" href="tel:+971523025251" data-call><span>Contact Us</span><span
+            <a class="button button--orange" href="tel:+971523025251" data-call onclick="return gtag_report_conversion(this.href)"><span>Contact Us</span><span
                 class="button__icon"><svg class="icon" aria-hidden="true">
                   <use href="#i-phone"></use>
                 </svg></span></a>
