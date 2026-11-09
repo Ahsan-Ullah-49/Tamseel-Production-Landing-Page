@@ -9,6 +9,7 @@
   });
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const wheelPointer = window.matchMedia("(hover: hover) and (pointer: fine)");
   const header = document.querySelector(".site-header");
   const menu = document.querySelector("#navigation");
   const menuToggle = document.querySelector(".menu-toggle");
@@ -20,7 +21,7 @@
   function configureScroll() {
     lenis?.destroy();
     lenis = null;
-    if (!reducedMotion.matches && window.Lenis) {
+    if (!reducedMotion.matches && wheelPointer.matches && window.Lenis) {
       lenis = new window.Lenis({
         autoRaf: true,
         lerp: 0.085,
@@ -34,6 +35,8 @@
     }
   }
   configureScroll();
+  reducedMotion.addEventListener("change", configureScroll);
+  wheelPointer.addEventListener("change", configureScroll);
 
   function closeMenu(restoreFocus = false) {
     menu.classList.remove("is-open");
@@ -120,6 +123,7 @@
   let dragStartX = 0;
   let dragStartOffset = 0;
   let draggingLogos = false;
+  let logoInView = !("IntersectionObserver" in window);
 
   function drawLogoTrack() {
     if (!logoLoopWidth) return;
@@ -143,13 +147,12 @@
   function syncLogoMotion() {
     window.cancelAnimationFrame(logoFrame);
     previousLogoFrame = 0;
-    configureScroll();
-    if (!reducedMotion.matches)
-      logoFrame = window.requestAnimationFrame(animateLogoTrack);
-    else {
+    if (reducedMotion.matches) {
       logoOffset = 0;
       logoTrack.style.transform = "none";
       marquee.scrollLeft = 0;
+    } else if (logoInView) {
+      logoFrame = window.requestAnimationFrame(animateLogoTrack);
     }
   }
 
@@ -195,6 +198,13 @@
     }
   });
   window.addEventListener("resize", measureLogoTrack, { passive: true });
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(([entry]) => {
+      if (entry.isIntersecting === logoInView) return;
+      logoInView = entry.isIntersecting;
+      if (!reducedMotion.matches) syncLogoMotion();
+    }).observe(marquee);
+  }
   reducedMotion.addEventListener("change", syncLogoMotion);
   syncLogoMotion();
 

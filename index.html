@@ -69,16 +69,20 @@
         "description": "Tamseel Production is a Dubai video production company creating corporate videos, commercials, documentaries, livestreams and podcasts."
       }
     </script>
-  <link rel="icon" type="image/png" href="Assets/Brand/Tab%20Favicon.png" />
+  <link rel="icon" type="image/png" sizes="48x48" href="Assets/Brand/tab-favicon-48.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Instrument+Serif:ital@1&display=swap"
-    rel="stylesheet" />
+  <link rel="preload" as="style"
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;family=Instrument+Serif:ital@1&amp;display=swap"
+    onload="this.onload = null; this.rel = 'stylesheet';" />
+  <noscript>
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Manrope:wght@400;500;600;700;800&amp;family=Instrument+Serif:ital@1&amp;display=swap" />
+  </noscript>
   <link rel="stylesheet" href="Assets/Vendor/lenis.css" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20261109-performance" />
   <script src="Assets/Vendor/lenis.min.js" defer></script>
-  <script src="script.js" defer></script>
+  <script src="script.js?v=20261109-performance" defer></script>
 </head>
 
 <body id="top">
@@ -169,8 +173,11 @@
     <!-- Licensed filmmaking photography sets the mood; the work below is all Tamseel's own. -->
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__frame">
-        <img class="hero__image" src="Assets/Images/cinema-camera.jpg" alt="" width="2000" height="1124"
-          fetchpriority="high" />
+        <picture>
+          <source media="(max-width: 760px)" srcset="Assets/Images/cinema-camera-1440.webp" />
+          <img class="hero__image" src="Assets/Images/cinema-camera.webp" alt="" width="2000" height="1124"
+            fetchpriority="high" />
+        </picture>
         <div class="hero__shade"></div>
         <div class="container hero__inner">
           <div class="hero__copy">
@@ -244,13 +251,13 @@
               <img src="Assets/Clint-Logos/Emirates.webp" alt="Emirates" width="140" height="64" loading="lazy" />
             </li>
             <li>
-              <img src="Assets/Clint-Logos/Sky%20News.webp" alt="Sky News" width="140" height="64" loading="lazy" />
+              <img src="Assets/Clint-Logos/web/Sky%20News.webp" alt="Sky News" width="140" height="64" loading="lazy" />
             </li>
             <li>
-              <img src="Assets/Clint-Logos/Lego.webp" alt="LEGO" width="140" height="64" loading="lazy" />
+              <img src="Assets/Clint-Logos/web/Lego.webp" alt="LEGO" width="140" height="64" loading="lazy" />
             </li>
             <li>
-              <img src="Assets/Clint-Logos/Black%20%26%20Decker.webp" alt="Black &amp; Decker" width="140" height="64"
+              <img src="Assets/Clint-Logos/web/Black%20%26%20Decker.webp" alt="Black &amp; Decker" width="140" height="64"
                 loading="lazy" />
             </li>
             <li>
@@ -264,42 +271,42 @@
                 loading="lazy" />
             </li>
             <li>
-              <img src="Assets/Clint-Logos/Jupiter.webp" alt="Jupiter" width="140" height="64" loading="lazy" />
+              <img src="Assets/Clint-Logos/web/Jupiter.webp" alt="Jupiter" width="140" height="64" loading="lazy" />
             </li>
             <li>
               <img src="Assets/Clint-Logos/mariga%20Peer.webp" alt="Marisa Peer" width="140" height="64"
                 loading="lazy" />
             </li>
             <li>
-              <img src="Assets/Clint-Logos/Myco.webp" alt="Myco" width="140" height="64" loading="lazy" />
+              <img src="Assets/Clint-Logos/web/Myco.webp" alt="Myco" width="140" height="64" loading="lazy" />
             </li>
             <li>
-              <img src="Assets/Clint-Logos/Eco%20Learn.webp" alt="Eco Learn" width="140" height="64" loading="lazy" />
+              <img src="Assets/Clint-Logos/web/Eco%20Learn.webp" alt="Eco Learn" width="140" height="64" loading="lazy" />
             </li>
             <li>
-              <img src="Assets/Clint-Logos/Lamprell.webp" alt="Lamprell" width="140" height="64" loading="lazy" />
+              <img src="Assets/Clint-Logos/web/Lamprell.webp" alt="Lamprell" width="140" height="64" loading="lazy" />
             </li>
             <li>
               <img src="Assets/Clint-Logos/Silk%20haus.webp" alt="Silkhaus" width="140" height="64" loading="lazy" />
             </li>
             <li>
-              <img src="Assets/Clint-Logos/Trapeze.webp" alt="Trapeze" width="140" height="64" loading="lazy" />
+              <img src="Assets/Clint-Logos/web/Trapeze.webp" alt="Trapeze" width="140" height="64" loading="lazy" />
             </li>
             <li>
               <img src="Assets/Clint-Logos/Newkee.webp" alt="Newkee" width="140" height="64" loading="lazy" />
             </li>
             <li>
-              <img src="Assets/Clint-Logos/Rai.webp" alt="RAI" width="140" height="64" loading="lazy" />
+              <img src="Assets/Clint-Logos/web/Rai.webp" alt="RAI" width="140" height="64" loading="lazy" />
             </li>
             <li>
-              <img src="Assets/Clint-Logos/Firstcry.webp" alt="Firstcry" width="140" height="64" loading="lazy" />
+              <img src="Assets/Clint-Logos/web/Firstcry.webp" alt="Firstcry" width="140" height="64" loading="lazy" />
             </li>
             <li>
-              <img src="Assets/Clint-Logos/importexporttv.webp" alt="Import Export TV" width="140" height="64"
+              <img src="Assets/Clint-Logos/web/importexporttv.webp" alt="Import Export TV" width="140" height="64"
                 loading="lazy" />
             </li>
             <li>
-              <img src="Assets/Clint-Logos/Dubz.webp" alt="Dubz" width="140" height="64" loading="lazy" />
+              <img src="Assets/Clint-Logos/web/Dubz.webp" alt="Dubz" width="140" height="64" loading="lazy" />
             </li>
           </ul>
         </div>
@@ -791,7 +798,7 @@
             <div class="review-card__source">
               <span class="quote-mark" aria-hidden="true">“</span>
               <span class="review-platform">
-                <span class="google-word"
+                <span class="google-word" role="img"
                   aria-label="Google"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></span>
                 review</span>
             </div>
@@ -806,14 +813,14 @@
             </blockquote>
             <figcaption>
               <span class="review-name">Houda Berrada</span>
-              <span class="review-stars" aria-label="5 stars">★★★★★</span>
+              <span class="review-stars" role="img" aria-label="5 stars">★★★★★</span>
             </figcaption>
           </figure>
           <figure class="review-card">
             <div class="review-card__source">
               <span class="quote-mark" aria-hidden="true">“</span>
               <span class="review-platform">
-                <span class="google-word"
+                <span class="google-word" role="img"
                   aria-label="Google"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></span>
                 review</span>
             </div>
@@ -827,14 +834,14 @@
             </blockquote>
             <figcaption>
               <span class="review-name">Sarah Leither</span>
-              <span class="review-stars" aria-label="5 stars">★★★★★</span>
+              <span class="review-stars" role="img" aria-label="5 stars">★★★★★</span>
             </figcaption>
           </figure>
           <figure class="review-card review-card--feature">
             <div class="review-card__source">
               <span class="quote-mark" aria-hidden="true">“</span>
               <span class="review-platform">
-                <span class="google-word"
+                <span class="google-word" role="img"
                   aria-label="Google"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></span>
                 review</span>
             </div>
@@ -844,7 +851,7 @@
             </blockquote>
             <figcaption>
               <span class="review-name">Diana Iskaf</span>
-              <span class="review-stars" aria-label="5 stars">★★★★★</span>
+              <span class="review-stars" role="img" aria-label="5 stars">★★★★★</span>
             </figcaption>
           </figure>
         </div>
@@ -874,27 +881,27 @@
           <div class="recognition__grid">
             <a class="recognition-card" href="https://www.dubaisbest.com/best-videographers-dubai/#5_Tamseel_Production"
               target="_blank" rel="noopener noreferrer" aria-label="View Tamseel Production on Dubai's Best">
-              <img src="Assets/Recognition/ChatGPT Image Oct 29, 2026, 03_45_39 PM-1.png" alt="Dubai's Best" width="500"
-                height="500" loading="lazy" />
+              <img src="Assets/Recognition/dubais-best-750.webp" alt="Dubai's Best" width="750" height="750"
+                loading="lazy" />
             </a>
             <a class="recognition-card" href="https://www.trustpilot.com/review/tamseelproduction.com" target="_blank"
               rel="noopener noreferrer" aria-label="Review Tamseel Production on Trustpilot">
-              <img src="Assets/Recognition/ChatGPT Image Oct 29, 2026, 03_45_41 PM-2.png" alt="Review us on Trustpilot"
-                width="500" height="500" loading="lazy" />
+              <img src="Assets/Recognition/trustpilot-750.webp" alt="Review us on Trustpilot" width="750" height="750"
+                loading="lazy" />
             </a>
             <a class="recognition-card"
               href="https://clutch.co/profile/tamseel-production?utm_source=widget&amp;utm_medium=1&amp;utm_campaign=widget&amp;utm_content=stars&amp;utm_term=tamseelproduction.com"
               target="_blank" rel="noopener noreferrer"
               aria-label="View Tamseel Production on Clutch: Top Documentary Production Company, UAE, 2026">
-              <img src="Assets/Recognition/ChatGPT Image Oct 29, 2026, 03_45_43 PM-3.png"
-                alt="Clutch Top Documentary Production Company, United Arab Emirates, 2026" width="500" height="500"
+              <img src="Assets/Recognition/clutch-documentary-750.webp"
+                alt="Clutch Top Documentary Production Company, United Arab Emirates, 2026" width="750" height="750"
                 loading="lazy" />
             </a>
             <a class="recognition-card"
               href="https://clutch.co/profile/tamseel-production?utm_source=widget&amp;utm_medium=1&amp;utm_campaign=widget&amp;utm_content=stars&amp;utm_term=tamseelproduction.com"
               target="_blank" rel="noopener noreferrer" aria-label="Read Tamseel Production's Clutch reviews">
-              <img src="Assets/Recognition/ChatGPT Image Oct 29, 2026, 03_45_44 PM-4.png" alt="Clutch, five reviews"
-                width="500" height="500" loading="lazy" />
+              <img src="Assets/Recognition/clutch-reviews-750.webp" alt="Clutch, five reviews" width="750" height="750"
+                loading="lazy" />
             </a>
           </div>
         </section>
