@@ -249,6 +249,17 @@ em {
     transform 0.25s,
     box-shadow 0.25s;
 }
+.call-copy {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 1px 0.4em;
+  white-space: nowrap;
+}
+.call-copy strong {
+  font-size: max(14px, 1em + 2px);
+  font-weight: 700;
+}
 .button__icon {
   display: grid;
   flex: 0 0 auto;
@@ -1395,6 +1406,10 @@ em {
     width: 26px;
     height: 26px;
   }
+  .header-actions .call-copy {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -1482,7 +1497,18 @@ em {
   .hero__actions {
     justify-content: flex-start;
     gap: 12px;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
+  }
+  .button--call-featured {
+    min-height: 54px;
+    max-width: 100%;
+    gap: 12px;
+    padding: 7px 8px 7px 17px;
+    font-size: 14px;
+  }
+  .button--call-featured .button__icon {
+    width: 36px;
+    height: 36px;
   }
   .hero__bottom {
     display: none;
@@ -1657,11 +1683,6 @@ em {
     font-size: 12px;
     margin-bottom: 13px;
   }
-  .closing__action .button {
-    font-size: 11px;
-    padding-left: 16px;
-    gap: 12px;
-  }
   .footer-middle {
     flex-wrap: wrap;
     gap: 14px;
@@ -1726,15 +1747,10 @@ em {
     gap: 10px;
     margin-top: 23px;
   }
-  .hero__actions .button {
-    min-height: 42px;
-    gap: 10px;
-    padding: 5px 6px 5px 15px;
-    font-size: 10px;
-  }
-  .hero__actions .button__icon {
-    width: 30px;
-    height: 30px;
+  .hero__actions .call-copy,
+  .work .section-heading .call-copy {
+    flex-direction: column;
+    align-items: flex-start;
   }
   .hero__reel {
     gap: 8px;
@@ -1998,11 +2014,6 @@ em {
   }
   .hero__actions {
     gap: 7px;
-    flex-wrap: nowrap;
-  }
-  .hero__actions .button {
-    gap: 7px;
-    padding-left: 11px;
   }
   .hero__reel {
     gap: 6px;
